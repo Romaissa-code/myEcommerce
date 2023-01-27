@@ -1,19 +1,16 @@
-
 import Link from "next/link";
-import style from "../styles/navBar.module.css"; 
+
 import { BsCart4 } from "react-icons/bs";
 import { useState } from "react";
-import { useDispatch ,useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getSearchTerm } from "./features/cart/cartSlice";
 const NavBar = () => {
-  const [term,setTerm] =useState('All');
-  const dispatch =useDispatch(); 
+  const [term, setTerm] = useState("All");
+  const dispatch = useDispatch();
 
-  const submitHnadler=(e)=>{
-     e.preventDefault();
-  }
-
-
+  const submitHnadler = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -55,7 +52,7 @@ const NavBar = () => {
               </Link>
             </li>
           </ul>
-          <form className={`d-flex ${style.cart}`} onSubmit={submitHnadler}>
+          <form className={`d-flex `} onSubmit={submitHnadler}>
             <input
               className="form-control me-2"
               type="search"
@@ -74,9 +71,9 @@ const NavBar = () => {
                 setTerm("");
               }}
             >
-              
-              <a   style={{ color: "white" }}href="#items">Search</a>
-              
+              <a style={{ color: "white" }} href="#items">
+                Search
+              </a>
             </button>
           </form>
           <a
@@ -95,4 +92,3 @@ const NavBar = () => {
   );
 };
 export default NavBar;
-
