@@ -1,5 +1,5 @@
 
-import SingleTestemonial from "./singleTestemonial";
+import SingleTestemonial from "./SingleTestemonial";
 import styles from "../styles/SingleTestemonial.module.css";
 
 const Testemonails = () => {
